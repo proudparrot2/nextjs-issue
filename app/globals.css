@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --ring: 224.3 76.3% 48%;
+    --radius: 0.5rem;
+  }
+
+  .catppuccinmocha {
+    --background: 240 21% 15%;
+    --foreground: 226 64% 88%;
+    --muted: 240 12% 19%;
+    --muted-foreground: 240 12% 69%;
+    --popover: 240 21% 12%;
+    --popover-foreground: 226 64% 98%;
+    --card: 240 21% 13%;
+    --card-foreground: 226 64% 93%;
+    --border: 240 11% 20%;
+    --input: 240 11% 23%;
+    --primary: 267 84% 81%;
+    --primary-foreground: 267 84% 21%;
+    --secondary: 267 30% 25%;
+    --secondary-foreground: 267 30% 85%;
+    --accent: 240 21% 30%;
+    --accent-foreground: 240 21% 90%;
+    --destructive: 8 96% 56%;
+    --destructive-foreground: 0 0% 100%;
+    --ring: 267 84% 81%;
+    --radius: 0.5rem;
+  }
+
+  .onedarkpro {
+    --background: 218 14% 16%;
+    --foreground: 219 14% 71%;
+    --muted: 218 12% 20%;
+    --muted-foreground: 218 12% 70%;
+    --popover: 218 14% 13%;
+    --popover-foreground: 219 14% 81%;
+    --card: 218 14% 14%;
+    --card-foreground: 219 14% 76%;
+    --border: 218 4% 21%;
+    --input: 218 4% 24%;
+    --primary: 220 13% 86%;
+    --primary-foreground: 220 13% 26%;
+    --secondary: 220 3% 25%;
+    --secondary-foreground: 220 3% 85%;
+    --accent: 218 14% 31%;
+    --accent-foreground: 218 14% 91%;
+    --destructive: 10 85% 46%;
+    --destructive-foreground: 0 0% 100%;
+    --ring: 220 13% 86%;
+    --radius: 0.5rem;
+  }
+
+  /* :root {
+    --background: 218 14% 16%;
+    --foreground: 219 14% 71%;
+    --muted: 218 12% 20%;
+    --muted-foreground: 218 12% 70%;
+    --popover: 218 14% 13%;
+    --popover-foreground: 219 14% 81%;
+    --card: 218 14% 14%;
+    --card-foreground: 219 14% 76%;
+    --border: 218 4% 21%;
+    --input: 218 4% 24%;
+    --primary: 220 13% 86%;
+    --primary-foreground: 220 13% 26%;
+    --secondary: 220 3% 25%;
+    --secondary-foreground: 220 3% 85%;
+    --accent: 218 14% 31%;
+    --accent-foreground: 218 14% 91%;
+    --destructive: 10 85% 46%;
+    --destructive-foreground: 0 0% 100%;
+    --ring: 220 13% 86%;
+    --radius: 0.5rem;
+  } */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    @apply h-screen;
+  }
+
+  .loading {
+    @apply pointer-events-none inline-block aspect-square w-6;
+    background-color: currentColor;
+    mask-size: 100%;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' stroke='%23000' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_V8m1%7Btransform-origin:center;animation:spinner_zKoa 2s linear infinite%7D.spinner_V8m1 circle%7Bstroke-linecap:round;animation:spinner_YpZS 1.5s ease-out infinite%7D%40keyframes spinner_zKoa%7B100%25%7Btransform:rotate(360deg)%7D%7D%40keyframes spinner_YpZS%7B0%25%7Bstroke-dasharray:0 150;stroke-dashoffset:0%7D47.5%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-16%7D95%25%2C100%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-59%7D%7D%3C%2Fstyle%3E%3Cg class='spinner_V8m1'%3E%3Ccircle cx='12' cy='12' r='9.5' fill='none' stroke-width='3'%3E%3C%2Fcircle%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  }
+  .loading-spinner {
+    mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' stroke='%23000' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_V8m1%7Btransform-origin:center;animation:spinner_zKoa 2s linear infinite%7D.spinner_V8m1 circle%7Bstroke-linecap:round;animation:spinner_YpZS 1.5s ease-out infinite%7D%40keyframes spinner_zKoa%7B100%25%7Btransform:rotate(360deg)%7D%7D%40keyframes spinner_YpZS%7B0%25%7Bstroke-dasharray:0 150;stroke-dashoffset:0%7D47.5%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-16%7D95%25%2C100%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-59%7D%7D%3C%2Fstyle%3E%3Cg class='spinner_V8m1'%3E%3Ccircle cx='12' cy='12' r='9.5' fill='none' stroke-width='3'%3E%3C%2Fcircle%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
